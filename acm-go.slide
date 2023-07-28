@@ -1,9 +1,11 @@
 # Introduction to Go
-goworkshop.libdb.so
-OldURL: goworkshop.libdb.so
+acmcsuf.com/go-workshop
+OldURL: go-workshop.acmcsuf.com
 
-Diamond
+Diamond, edited by Ethan
 ACM at CSUF
+
+7th weekly workshop of Hot Open Source Summer
 
 // - What is Go, made by who
 // - What is Go commonly used for
@@ -27,7 +29,7 @@ ACM at CSUF
 //     - Profiling (pprof), awesome feature to debug slow code
 // - Go Tour, easy self-learn
 
-## A Taste of Go
+## A taste of Go
 
 .play -edit cmd/hello/main.go
 
@@ -35,10 +37,13 @@ Look at how fast it compiles!
 
 .image images/gopher-running.jpg
 
-## What is a Go?
+## What is Go?
 
 Go (at [go.dev](https://go.dev)) is a programming language designed by Robert
-Griesemer, Rob Pike and Ken Thompson at Google.
+Griesemer, Rob Pike and Ken Thompson at Google since 2007.
+
+The official announcement of Go was made in November 2009, and it was
+open-sourced in 2012.
 
 The big names:
 
@@ -62,7 +67,7 @@ Go is commonly used for:
 Go cannot:
 
 - Write an operating system (it needs kernel APIs)
-- Help you write the shortest code (it's meant to encourage good
+- Help you write the shortest/optimal code (it's meant to encourage good
   practices and readability)
 
 ## Trying Go
@@ -107,7 +112,7 @@ Simply push it to a public repository (e.g. on GitHub) and it will be
 automatically generated.
 
 Here's [pkg.go.dev/github.com/diamondburned/arikawa/v3](https://pkg.go.dev/github.com/diamondburned/arikawa/v3),
-which is my Discord library!
+which is Diamond's Discord library!
 
 <div style="height: 0.5em"></div>
 <div align="center">
@@ -142,61 +147,7 @@ We can do this with just the built-in standard library!
 // 
 // .play cmd/rest2/main.ts /^serve(.|\n)*/
 
-## Let's make a REST API!
-
-## What we'll do
-
-We'll pretend we're Jeff Bezos and make a REST API for our online bookstore.
-
-Our bookstore will have:
-
-- A REST API for getting, creating, updating and deleting books
-- A SQLite database to store our books
-- Unit tests for our API
-
-// ## Cloning
-// 
-// Open the demo `bookstore` project:
-// 
-// 	git clone https://github.com/diamondburned/acm-go-present
-// 	cd acm-go-present/cmd/bookstore
-
-## Project Structure
-
-	.
-	├── bookstore/      -- folder encompassing the bookstore
-	│   ├── api/          -- REST API handlers
-	│   ├── bookstore.go  -- data types and models
-	│   └── db/           -- SQLite store implementation
-	├── go.mod
-	├── go.sum
-	├── main.go         -- main server program
-	└── README.md
-
-## Terminal Time!
-
-## Hey, heads up!
-
-This slide deck contains quick Go references! You can find them right after this
-slide, but I won't be going over them in this workshop.
-
-More resources that you can use:
-
-- Go Tour ([go.dev/tour](https://go.dev/tour)), an interactive Go tutorial made
-  by the Go team.
-- Go Playground ([go.dev/tour](https://go.dev/tour)), a place to try out short
-  Go codes.
-- Learn Go in Y minutes ([learnxinyminutes.com/docs/go](https://learnxinyminutes.com/docs/go/)),
-  a quick and condensed reference for Go.
-- Go Workshop ([goworkshop.libdb.so](https://goworkshop.libdb.so)): this slide
-  deck.
-
-.image images/gopher-group.png
-
-// Don't include everything below this in the presentation.
-// It's meant to serve as reference for after the workshop.
-
-## X in Y minutes, Y=Go
+## X in Y minutes
 
 ## Go is statically typed
 
@@ -332,7 +283,7 @@ func main() {
 }
 ```
 
-## Go's dependency management is like Node.JS
+## Go's dependency management is like Node.js
 
 Initialize a project by making a new directory and running `go mod init`:
 
@@ -372,6 +323,28 @@ To run all packages' tests:
 ```sh
 $ go test ./...
 ```
+
+## Hey, heads up!
+
+This slide deck contains quick Go references! You can find them right after this
+slide, but I won't be going over them in this workshop.
+
+More resources that you can use:
+
+- Go Tour ([go.dev/tour](https://go.dev/tour)), an interactive Go tutorial made
+  by the Go team.
+- Go Playground ([go.dev/tour](https://go.dev/tour)), a place to try out short
+  Go codes.
+- Learn Go in Y minutes ([learnxinyminutes.com/docs/go](https://learnxinyminutes.com/docs/go/)),
+  a quick and condensed reference for Go.
+- Go by Example ([gobyexample.com](https://gobyexample.com)), a collection of
+  Go examples.
+- Go style guide ([google.github.io/styleguide/go](https://google.github.io/styleguide/go/)), a
+  style guide for Go by Google.
+- Go Workshop ([acmcsuf.com/go-workshop](https://acmcsuf.com/go-workshop)): this slide
+  deck.
+
+.image images/gopher-group.png
 
 ## Let's set up Go!
 
@@ -417,7 +390,7 @@ go install golang.org/x/tools/gopls@latest
 
 Then add `gopls` to any of your LSP plugins (e.g. CoC, ALE, Neovim LSP, etc.)
 
-If you have any issues, just ask me! I use Vim, BTW.
+If you have any issues, just ask Diamond or other Vim enthusiasts in ACM at CSUF.
 
 ## Check that your environment works
 
@@ -427,3 +400,46 @@ Simply make sure that your autocompletion works:
 	<img src="images/completion.png" width="80%">
 </div>
 
+## Let's make a REST API!
+
+## What we'll do
+
+We'll pretend we're Jeff Bezos and make a REST API for our online bookstore.
+
+Our bookstore will have:
+
+- A REST API for getting, creating, updating and deleting books
+- A SQLite database to store our books
+- Unit tests for our API
+
+// ## Cloning
+// 
+// Open the demo `bookstore` project:
+// 
+// 	git clone https://github.com/diamondburned/acm-go-present
+// 	cd acm-go-present/cmd/bookstore
+
+## Project Structure
+
+	.
+	├── bookstore/      -- folder encompassing the bookstore
+	│   ├── api/          -- REST API handlers
+	│   ├── bookstore.go  -- data types and models
+	│   └── db/           -- SQLite store implementation
+	├── go.mod
+	├── go.sum
+	├── main.go         -- main server program
+	└── README.md
+
+## Let's start!
+
+// Leave as an exercise for the audience.
+
+## Terminal time!
+
+## Conclusion
+
+- Go is a great language for backend development, systems programming, CLI tools, and more!
+- Mastering Golang's best practices enables elegant, maintainable, and straightforward software development across diverse applications.
+
+Thank you for attending! Questions?

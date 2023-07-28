@@ -14,7 +14,7 @@ a small frontend in the `index.html` file.
 To run the slides locally, you need to install [Go](https://golang.org/) and run the [`present`](https://godoc.org/golang.org/x/tools/present) tool:
 
 ```sh
-go run golang.org/x/tools/cmd/present
+go run golang.org/x/tools/cmd/present --play=true --use_playground
 ```
 
 ---

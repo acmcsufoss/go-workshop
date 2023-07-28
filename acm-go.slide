@@ -2,10 +2,13 @@
 acmcsuf.com/go-workshop
 OldURL: go-workshop.acmcsuf.com
 
-Diamond, edited by Ethan
+Original content from Diamond, edited by Ethan
+
 ACM at CSUF
 
 7th weekly workshop of Hot Open Source Summer
+
+Questions are welcome at any time!
 
 // - What is Go, made by who
 // - What is Go commonly used for
@@ -440,6 +443,6 @@ Our bookstore will have:
 ## Conclusion
 
 - Go is a great language for backend development, systems programming, CLI tools, and more!
-- Mastering Golang's best practices enables elegant, maintainable, and straightforward software development across diverse applications.
+- Mastering Go best practices enables elegant, maintainable, and straightforward software development across diverse applications.
 
-Thank you for attending! Questions?
+.image images/oss-logo.png
